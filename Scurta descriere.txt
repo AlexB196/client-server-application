@@ -1,0 +1,37 @@
+Am creat o aplicatie de chat complete cu nume de utilizatori si mesaje de connect/disconnect. Aplicatia ruleaza in timp real. 
+Am folosit libraria "Socket.io", pe care am instalat-o configurand mai intai libraria "npm" in Visual Studio.
+Folosind "npm" am instalat din terminal libraria "Socket.io", pe care o folosesc pentru a face in timp real management-ul conexiunilor
+la un server Node.js, acesta permitandu-mi sa comunic in timp real prin mesaje cu toti clientii/utilizatorii conectati la server.
+
+
+!Pas important! - acest pas este urmat dupa ce mi-am creat interfata de frontend a aplicatiei de chat
+
+- Pentru a face aplicatia sa ruleze in timp real o sa avem nevoie de niste dependente. Am instalat Node.js pentru a putea folosi
+registrul/libraria "npm". In Visual Studio, in terminal, am apelat comanda "npm init" care ne va seta fisierul/proiectul pentru a putea
+folosi libraria. Dupa aceea, o sa folosesc comanda "npm i socket.io" prin care va fi instalat Socket.io. Acesta va fi web socketul pentru
+comunicare in timp real. Urmatoarea comanda pe care o voi folosi este "npm i --save-dev nodemon" ce va fi folosita pentru a instala Nodemon.
+Nodemon vine in ajutorul celui ce codeaza. Permite serverului sa isi dea refresh automat, dupa fiecare modificare salvata. Astfel nu este
+nevoie de a inchide serverul si a-l deschide de fiecare data cand o schimbare este facuta.
+
+
+Informatii legate de fisierul "package.json": 
+
+- Aici o sa avem doar date ce vor fi interschimbate de catre browser si server. In sectiunea 
+"scripts" am adaugat linia '"devstart": "nodemon server.js"'. Prin aceasta linie transmitem faptul ca vrem sa folosim Nodemon pe server
+si mai exact prin fisierul "server.js".
+
+
+Dupa ce am creat fisierul "server.js", in terminal am rulat comanda "npm run devStart", care va rula Nodemon pe fisierul "server.js".
+
+Mai avem si un fisier "script.js" unde cream toata partea de javascript ce tine de partea de client.
+
+
+!Important!
+
+-In Visual Studio am instalat extensia "Live Server" ce imi permite sa pornesc serverul pe protul setat de mine in cod. Dupa ce am instalat acea extensie,
+in Visual Studio(tin sa mentionez faptul ca folosesc ultima versiune de Visual Studio), in partea din dreapta jos, este o bara unde imi
+va aparea un buton "Go Live", prin care o sa imi pornesc serverul si o sa mi se deschida si o fereastra in browser unde va rula serverul.
+
+
+Pentru a testa aplicatia, trebuie doar pornit server-ul, iar apoi putem deschide mai multe tab-uri in browser cu adresa server-ului. Astfel "cream" mai multi utilizatori
+si putem scrie din oricare tab deschis, iar mesajul va aparea pe toate tab-urile deschise.
